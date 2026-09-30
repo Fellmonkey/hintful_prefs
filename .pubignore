@@ -1,0 +1,7 @@
+# Development/CI files — none of this belongs in the published package.
+.dart_tool/
+build/
+coverage/
+.github/
+.gitattributes
+pubspec.lock
