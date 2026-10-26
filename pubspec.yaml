@@ -1,6 +1,6 @@
 name: hintful_prefs
 description: shared_preferences-backed persistent store for hintful — show a hint or tour once per app version, out of the box.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/Fellmonkey/hintful_prefs
 topics:
   - flutter

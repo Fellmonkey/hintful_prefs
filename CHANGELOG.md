@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1
+
+- Add a minimal `example/` app showing `SharedPreferencesHintStore` in use.
+- No library changes. This release re-triggers pub.dev's package analysis,
+  which previously ran before `hintful` 1.0.0 was published and could not
+  resolve the `hintful: ^1.0.0` dependency.
+
 ## 1.0.0
 
 - Initial release: `SharedPreferencesHintStore` — the persistent
