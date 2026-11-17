@@ -1,5 +1,11 @@
 # Lint configuration — kept in step with the `hintful` core package.
 analyzer:
+  errors:
+    # 1.x line: the example keeps the legacy Material import so the whole
+    # package stays on the Dart 3.2 / Flutter 3.16 floor. Flutter 3.50
+    # deprecates it; the 2.x line migrates and drops this override.
+    # TODO(hintful_prefs): remove at 1.x end of life.
+    deprecated_member_use: ignore
   exclude:
     - build/**
     - android/**

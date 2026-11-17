@@ -79,7 +79,9 @@ await controller.tryShowTour(
 ## Development
 
 Requires Dart ≥ 3.2 / Flutter ≥ 3.16 (same floor as `hintful`) and
-`shared_preferences ^2.3.0`.
+`shared_preferences ^2.3.0`. This 1.x line is still maintained for older
+Flutter SDKs — see [SUPPORT.md](SUPPORT.md); the forward line (2.x) depends on
+`hintful` 2.x and requires Flutter 3.47+.
 
 See the [`hintful`](https://pub.dev/packages/hintful) documentation for the
 full API, best practices and FAQ. MIT licensed.

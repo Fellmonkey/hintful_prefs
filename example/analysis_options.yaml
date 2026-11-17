@@ -1,4 +1,7 @@
 analyzer:
+  errors:
+    # 1.x line: legacy Material import kept on purpose (see root config).
+    deprecated_member_use: ignore
   exclude:
     - build/**
     - android/**
