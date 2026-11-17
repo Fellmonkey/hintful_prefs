@@ -23,4 +23,5 @@
 library;
 
 export 'package:hintful/hintful.dart' show compareHintVersions;
+
 export 'src/shared_preferences_hint_store.dart' show SharedPreferencesHintStore;

@@ -1,6 +1,6 @@
 name: hintful_prefs
 description: shared_preferences-backed persistent store for hintful — show a hint or tour once per app version, out of the box.
-version: 1.0.1
+version: 2.0.0
 repository: https://github.com/Fellmonkey/hintful_prefs
 topics:
   - flutter
@@ -9,15 +9,15 @@ topics:
   - coach-marks
   - shared-preferences
 environment:
-  # Floor follows `hintful` (which needs Flutter 3.16 for textScalerOf) and
-  # shared_preferences ^2.3.0.
-  sdk: '>=3.2.0 <4.0.0'
-  flutter: '>=3.16.0'
+  # Floor follows `hintful` 2.x (material_ui: Dart 3.13 / Flutter 3.47) and
+  # shared_preferences ^2.3.0. Apps on older SDKs stay on hintful_prefs 1.x.
+  sdk: '>=3.13.0 <4.0.0'
+  flutter: '>=3.47.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  hintful: ^1.0.0
+  hintful: ^2.0.0
   shared_preferences: ^2.3.0
 
 dev_dependencies:

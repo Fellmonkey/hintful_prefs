@@ -24,7 +24,10 @@ class SharedPreferencesHintStore implements HintStore {
   /// Wraps [prefs]; [prefix] namespaces every hint key
   /// (default `hintful.`).
   SharedPreferencesHintStore(this._prefs, {String prefix = 'hintful.'})
-      : _prefix = prefix;
+    : // The public `prefix:` parameter is API; an initializing formal
+      // would rename it to a private name.
+      // ignore: prefer_initializing_formals
+      _prefix = prefix;
 
   final SharedPreferences _prefs;
   final String _prefix;
