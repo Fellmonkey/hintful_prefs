@@ -4,9 +4,9 @@ publish_to: 'none'
 version: 1.0.0
 
 environment:
-  # Same floor as the library.
-  sdk: '>=3.2.0 <4.0.0'
-  flutter: '>=3.16.0'
+  # Same floor as hintful_prefs 2.x.
+  sdk: '>=3.13.0 <4.0.0'
+  flutter: '>=3.47.0'
 
 dependencies:
   flutter:
@@ -14,7 +14,8 @@ dependencies:
   # The package under demonstration — through the public barrel.
   hintful_prefs:
     path: ../
-  hintful: ^1.0.0
+  hintful: ^2.0.0
+  material_ui: ^1.11.1
   shared_preferences: ^2.3.0
 
 dev_dependencies:

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:hintful/hintful.dart';
 import 'package:hintful_prefs/hintful_prefs.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -66,8 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
             targetId: 'demoButton',
             content: HintStepContent(
               title: 'Once per app version',
-              description:
-                  'Restart the app: no tour. Bump the app version: the tour is back.',
+              description: 'Restart the app: no tour. Bump the app version: the tour is back.',
             ),
           ),
         ],

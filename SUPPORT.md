@@ -1,14 +1,15 @@
-# Support policy — 1.x maintenance line
+# Support policy
 
-This branch is the **1.x line** of `hintful_prefs`: dependency `hintful:
-^1.0.0`, Dart 3.2 / Flutter 3.16 floor. It is **alive and maintained**.
+`hintful_prefs` mirrors the two `hintful` lines. Upgrade the two packages
+together.
 
-- Bug fixes and compatibility patches continue as 1.0.x from this branch;
-  CI checks Flutter 3.47.0 and 3.50.0.
-- Its public API is frozen (`SharedPreferencesHintStore` plus the re-exported
-  `compareHintVersions`).
-- It pairs with `hintful` 1.x, which remains the supported line for apps that
-  cannot move to `material_ui` / Flutter 3.47+.
+| Line | Dependency | SDK floor | Role |
+|---|---|---|---|
+| **1.x** | `hintful: ^1.0.0` | Dart 3.2 / Flutter 3.16 | **maintenance** — still alive for older Flutter |
+| **2.x** | `hintful: ^2.0.0` | Dart 3.13 / Flutter 3.47 | **current** development (Material comes from `material_ui`) |
 
-The forward line is `hintful_prefs` 2.x, which depends on `hintful` 2.x.
-Both lines implement the same two-member `HintStore` contract.
+- 1.x keeps receiving bug-fix releases as 1.0.x from the `1.x` branch. Its
+  public API is frozen; CI checks Flutter 3.47.0 and 3.50.0.
+- 2.x is where new work happens; its CI also checks both SDKs.
+- `SharedPreferencesHintStore`'s own API is unchanged between the lines — the
+  major bump exists because `HintStore` types come from `hintful`.

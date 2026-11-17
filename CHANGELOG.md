@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0
+
+Tracks `hintful` 2.x (Flutter 3.50 / `material_ui`).
+
+- Dependency is now `hintful: ^2.0.0`; floors raised to Dart >= 3.13 /
+  Flutter >= 3.47. No change to `SharedPreferencesHintStore`'s own API —
+  this is a major bump because `HintStore`'s types come from `hintful`.
+- Apps on older SDKs stay on `hintful_prefs` 1.x with `hintful` 1.x.
+
 ## 1.0.1
 
 - Add a minimal `example/` app showing `SharedPreferencesHintStore` in use.

@@ -23,8 +23,8 @@ jobs:
           flutter-version: ${{ matrix.sdk }}
           channel: stable
           cache: true
-      # Resolution comes from pub.dev, so `hintful: ^1.0.0` must be published
-      # for this job to go green.
+      # Resolution comes from pub.dev, so `hintful: ^2.0.0` must be published
+      # before this job can go green.
       - name: Analyze + test
         run: |
           flutter pub get

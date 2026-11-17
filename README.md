@@ -7,8 +7,9 @@
 [`hintful`](https://pub.dev/packages/hintful)** — show a hint or tour once
 per app version, out of the box.
 
-The `hintful` core stays dependency-free ("dart:ui + widgets only"): the
-`HintStore` contract lives there, storage implementations live outside it.
+The `hintful` core owns the `HintStore` contract; storage implementations live
+outside it. In 2.x the core depends on Flutter plus its official `material_ui`
+(1.x was dependency-free on the legacy Material import).
 This companion package ships the ready-made persistent store so a product app
 does not have to write even the three-line `CallbackHintStore`.
 
@@ -16,8 +17,8 @@ does not have to write even the three-line `CallbackHintStore`.
 
 ```yaml
 dependencies:
-  hintful: ^1.0.0
-  hintful_prefs: ^1.0.0
+  hintful: ^2.0.0
+  hintful_prefs: ^2.0.0
 ```
 
 ```dart
@@ -78,10 +79,11 @@ await controller.tryShowTour(
 
 ## Development
 
-Requires Dart ≥ 3.2 / Flutter ≥ 3.16 (same floor as `hintful`) and
-`shared_preferences ^2.3.0`. This 1.x line is still maintained for older
-Flutter SDKs — see [SUPPORT.md](SUPPORT.md); the forward line (2.x) depends on
-`hintful` 2.x and requires Flutter 3.47+.
+Requires Dart ≥ 3.13 / Flutter ≥ 3.47 (same floor as `hintful` 2.x) and
+`shared_preferences ^2.3.0`. The 1.x line is still maintained for older
+SDKs — see [SUPPORT.md](SUPPORT.md) and the
+[hintful 1.x → 2.x migration guide](https://github.com/Fellmonkey/hintful/blob/2.x/doc/FLUTTER_3_50_MIGRATION.md)
+when upgrading.
 
 See the [`hintful`](https://pub.dev/packages/hintful) documentation for the
 full API, best practices and FAQ. MIT licensed.
